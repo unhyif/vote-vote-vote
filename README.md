@@ -17,3 +17,7 @@ https://vote-vote-vote.netlify.app
 - Reset the app
 - Responsively designed
 - It uses `localStorage`, so it remains even if you close the page and come back later
+
+<br>
+
+<a href="https://www.flaticon.com/free-icons/vote" title="vote icons">Vote icons created by Freepik - Flaticon</a>

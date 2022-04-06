@@ -17,6 +17,7 @@ function OptionAddForm({ onAdd }) {
         ref={input}
         className={styles.addInput}
         placeholder="Add a new option!"
+        required
       />
       <button className={styles.addBtn}>
         <FontAwesomeIcon icon={faPlus} />
