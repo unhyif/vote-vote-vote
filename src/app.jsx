@@ -55,12 +55,14 @@ function App({ operation }) {
   return (
     <>
       <Header optionsCount={options.length} onReset={handleReset} />
-      <Options
-        options={options}
-        onVote={handleVote}
-        onDelete={handleDelete}
-        operation={operation}
-      />
+      {options.length ? (
+        <Options
+          options={options}
+          onVote={handleVote}
+          onDelete={handleDelete}
+          operation={operation}
+        />
+      ) : null}
       <OptionAddForm onAdd={handleAdd} />
     </>
   );

@@ -1,0 +1,30 @@
+.addForm {
+  margin-top: 3em;
+  width: 50%;
+  text-align: center;
+}
+
+.addInput {
+  font-size: 2.2rem;
+  padding: 0.5em 1em;
+  border: 0.4rem solid rgb(230, 230, 230);
+  border-radius: 2rem;
+  width: 70%;
+  margin-right: 0.5em;
+}
+
+.addInput::placeholder {
+  color: rgb(160, 160, 160);
+}
+
+.addBtn {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--light-green);
+}
+
+@media screen and (max-width: 48rem) {
+  .addInput {
+    width: 85%;
+  }
+}
