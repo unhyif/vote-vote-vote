@@ -2,7 +2,7 @@ import React from "react";
 import Option from "../option/option";
 import styles from "./options.module.css";
 
-function Options({ options, onVote }) {
+function Options({ options, onVote, onDelete, operation }) {
   return (
     <ul className={styles.options}>
       {options.map((option, index) => (
@@ -11,6 +11,8 @@ function Options({ options, onVote }) {
           option={option}
           rank={index + 1}
           onVote={onVote}
+          onDelete={onDelete}
+          operation={operation}
         />
       ))}
     </ul>
