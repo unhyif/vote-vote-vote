@@ -10,7 +10,7 @@ function Header({ optionsCount, onReset }) {
           There are <span className={styles.count}>{optionsCount}</span> options
           to vote for.
         </p>
-        <button className={styles.reset} onClick={onReset}>
+        <button className={styles.resetBtn} onClick={onReset}>
           Reset
         </button>
       </div>

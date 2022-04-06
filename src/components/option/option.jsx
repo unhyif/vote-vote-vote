@@ -11,7 +11,9 @@ function Option({ option, rank, onVote, onDelete, operation }) {
     <li className={styles.option}>
       <span className={styles.rank}>{operation.getTrophyOrNot(rank)}</span>
       <p className={styles.content}>{option.content}</p>
-      <span className={styles.votes}>{option.votes} votes</span>
+      <p className={styles.votes}>
+        <span className={styles.count}>{option.votes}</span> votes
+      </p>
 
       <button className={styles.voteBtn} onClick={handleClick}>
         <FontAwesomeIcon icon={faStamp} />

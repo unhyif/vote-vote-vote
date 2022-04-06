@@ -2,3 +2,45 @@
   display: flex;
   align-items: center;
 }
+
+.rank {
+  font-size: 3rem;
+  flex: 0 0 4.5rem;
+  color: rgb(250, 90, 180);
+}
+
+.option:nth-child(n + 4) .rank {
+  padding-left: 0.3em;
+}
+
+.rank,
+.content {
+  font-weight: 600;
+}
+
+.content {
+  font-size: 1.8rem;
+  flex-grow: 1;
+}
+
+.count {
+  font-weight: 600;
+  color: var(--light-green);
+}
+
+.voteBtn {
+  color: rgb(120, 80, 60);
+  font-size: 2.5rem;
+  margin: 0 2em 0 0.5em;
+}
+
+.deleteBtn {
+  color: rgb(200, 0, 0);
+  font-size: 2.1rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .rank {
+    width: 2.5rem;
+  }
+}

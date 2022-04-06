@@ -46,8 +46,10 @@ function App({ operation }) {
   }, []);
 
   const handleReset = useCallback(() => {
-    localStorage.setItem(OPTIONS_KEY, JSON.stringify([]));
-    setOptions([]);
+    if (window.confirm("Are you sure to reset the app?")) {
+      localStorage.setItem(OPTIONS_KEY, JSON.stringify([]));
+      setOptions([]);
+    }
   }, []);
 
   return (
