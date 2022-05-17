@@ -5,7 +5,7 @@ import styles from "./options.module.css";
 function Options({ options, onVote, onDelete, operation }) {
   return (
     <ul className={styles.options}>
-      {options.map((option, index) => (
+      {operation.sort(options, "votes").map((option, index) => (
         <Option
           key={option.id}
           option={option}
