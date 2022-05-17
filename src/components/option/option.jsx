@@ -1,14 +1,17 @@
-import React, { memo, useRef } from "react";
+import React, { memo, useContext, useRef } from "react";
+import { HandlersContext } from "../../app";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStamp, faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
 import styles from "./option.module.css";
 
-function Option({ option, rank, onVote, onDelete, operation }) {
+function Option({ option, rank, operation }) {
+  const handlers = useContext(HandlersContext);
   const liRef = useRef();
-  const handleClick = () => onVote(option);
+
+  const handleClick = () => handlers.onVote(option);
   const handleDelete = () => {
     liRef.current.style.opacity = 0;
-    setTimeout(() => onDelete(option), 500);
+    setTimeout(() => handlers.onDelete(option), 500);
   };
 
   return (

@@ -4,6 +4,8 @@ import Options from "./components/options/options";
 import OptionAddForm from "./components/optionAddForm/optionAddForm";
 import Header from "./components/header/header";
 
+export const HandlersContext = React.createContext({});
+
 const OPTIONS_KEY = "options";
 
 function reducer(state, action) {
@@ -61,14 +63,13 @@ function App({ operation }) {
   return (
     <>
       <Header optionsCount={options.length} onReset={handleReset} />
-      {options.length ? (
-        <Options
-          options={options}
-          onVote={handleVote}
-          onDelete={handleDelete}
-          operation={operation}
-        />
-      ) : null}
+      <HandlersContext.Provider
+        value={{ onVote: handleVote, onDelete: handleDelete }}
+      >
+        {options.length ? (
+          <Options options={options} operation={operation} />
+        ) : null}
+      </HandlersContext.Provider>
       <OptionAddForm onAdd={handleAdd} />
     </>
   );
