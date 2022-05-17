@@ -11,7 +11,7 @@ class Operation {
     });
   } // TODO: merge sort
 
-  getTrophyOrNot(num) {
+  getMedalOrNot(num) {
     switch (num) {
       case 1:
         return "🥇";
